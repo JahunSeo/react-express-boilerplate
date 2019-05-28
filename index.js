@@ -1,4 +1,6 @@
 const express = require("express");
+// temp
+const models = require("./models");
 
 const app = express();
 

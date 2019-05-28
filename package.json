@@ -11,7 +11,8 @@
     "dev": "concurrently \"yarn run server\" \"yarn run client\""
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sequelize": "^5.8.6"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
