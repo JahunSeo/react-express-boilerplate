@@ -18,10 +18,10 @@ module.exports = {
 
   development: {
     db: {
-      database: "",
-      host: "",
-      username: "",
-      password: "",
+      database: process.env.DB_NAME,
+      host: process.env.DB_HOSTNAME,
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
       dialect: "mysql",
       forceSync: false,
       alter: false
@@ -29,10 +29,10 @@ module.exports = {
   },
   test: {
     db: {
-      database: "",
-      host: "",
-      username: "",
-      password: "",
+      database: process.env.DB_NAME,
+      host: process.env.DB_HOSTNAME,
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
       dialect: "mysql",
       forceSync: false,
       alter: false
@@ -40,10 +40,10 @@ module.exports = {
   },
   production: {
     db: {
-      database: "",
-      host: "",
-      username: "",
-      password: "",
+      database: process.env.DB_NAME,
+      host: process.env.DB_HOSTNAME,
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
       dialect: "mysql",
       forceSync: false,
       alter: false

@@ -1,10 +1,11 @@
 const express = require("express");
-// temp
-const models = require("./models");
-
 const app = express();
 
 const PORT = process.env.PORT || 5000;
+require("dotenv").config();
+
+// temp
+const models = require("./models");
 
 app.get("/", (req, res) => {
   res.send("hello");
