@@ -35,9 +35,9 @@ let row_bead = {
 
 // connect a thread to beads or another threads
 let arrow = {
-  fromType: "THREAD", // always be thread, maybe
+  // fromType: "THREAD", // always be thread, maybe
   fromId: 1,
-  toType: "BEAD",
+  // toType: "BEAD",
   toId: 2,
   order: 0
 };
