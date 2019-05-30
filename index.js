@@ -6,6 +6,7 @@ require("dotenv").config();
 
 // temp
 const models = require("./models");
+models.sequelize.sync();
 
 app.get("/", (req, res) => {
   res.send("hello");

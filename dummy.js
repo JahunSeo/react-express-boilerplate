@@ -54,16 +54,16 @@ let page = {
         toType: "BEAD",
         toId: 2,
         order: 0,
-        title,
-        content,
-        userId
+        title: "",
+        content: "",
+        userId: 1
       },
       {
         toType: "THREAD",
         toId: 3,
         order: 1,
-        title,
-        userId,
+        title: "",
+        userId: 1,
         // if needed, query once more, from arrow table by fromId equal to 3,
         // including bead or thread.
         items: []
@@ -72,9 +72,9 @@ let page = {
         toType: "BEAD",
         toId: 4,
         order: 2,
-        title,
-        content,
-        userId
+        title: "",
+        content: "",
+        userId: 2
       }
     ]
   }
