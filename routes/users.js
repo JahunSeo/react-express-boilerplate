@@ -5,7 +5,7 @@ const router = express.Router();
 router.get("/test", async function(req, res, next) {
   try {
     let user = await models.User.create({
-      email: "johnny@wizschool.io",
+      email: "johnny1@wizschool.io",
       password: "1234",
       name: "johnny"
     });
