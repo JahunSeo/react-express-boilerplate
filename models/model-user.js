@@ -20,7 +20,10 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   User.associate = function(models) {
-    models.User.hasMany(models.Vertex);
+    models.User.hasMany(models.Vertex, {
+      foreignKey: "email",
+      sourceKey: "email"
+    });
   };
 
   return User;

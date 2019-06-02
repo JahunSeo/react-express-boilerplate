@@ -15,7 +15,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 const users = require("./routes/users");
+const vertices = require("./routes/vertices");
 app.use("/users", users);
+app.use("/vertices", vertices);
 
 const db = require("./db");
 db();

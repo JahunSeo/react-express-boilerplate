@@ -21,7 +21,10 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Vertex.associate = function(models) {
-    models.Vertex.belongsTo(models.User, {});
+    models.Vertex.belongsTo(models.User, {
+      foreignKey: "email",
+      targetKey: "email"
+    });
     models.Vertex.hasMany(models.Edge, { foreignKey: "from" });
     models.Vertex.hasMany(models.Edge, { foreignKey: "to" });
   };
