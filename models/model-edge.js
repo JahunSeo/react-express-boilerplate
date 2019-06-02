@@ -15,10 +15,12 @@ module.exports = (sequelize, DataTypes) => {
   // TODO: from, to associate
   Edge.associate = function(models) {
     models.Edge.belongsTo(models.Vertex, {
-      foreignKey: "from"
+      foreignKey: "from",
+      as: "parentVertex"
     });
     models.Edge.belongsTo(models.Vertex, {
-      foreignKey: "to"
+      foreignKey: "to",
+      as: "childVertex"
     });
   };
 

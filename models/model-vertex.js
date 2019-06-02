@@ -15,6 +15,11 @@ module.exports = (sequelize, DataTypes) => {
       content: {
         type: DataTypes.TEXT,
         allowNull: true
+      },
+      publicStatus: {
+        type: DataTypes.STRING(16),
+        allowNull: false,
+        defaultValue: "public" // friend-only, closed,
       }
     },
     { timestamps: true }
@@ -25,8 +30,11 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "email",
       targetKey: "email"
     });
-    models.Vertex.hasMany(models.Edge, { foreignKey: "from" });
-    models.Vertex.hasMany(models.Edge, { foreignKey: "to" });
+    models.Vertex.hasMany(models.Edge, {
+      foreignKey: "from",
+      as: "childEdges"
+    });
+    models.Vertex.hasMany(models.Edge, { foreignKey: "to", as: "parentEdges" });
   };
 
   return Vertex;
