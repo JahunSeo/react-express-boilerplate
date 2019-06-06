@@ -1,0 +1,70 @@
+.Page--Thread {
+  .section {
+    border: 1px dotted green;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Thread {
+    border: 2px solid #d8d8d8;
+    border-radius: 7px;
+    margin: 5px 0;
+    padding: 10px 20px;
+  }
+  .Thread--on {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+  }
+
+  .Thread__title {
+    cursor: pointer;
+  }
+
+  .ChildItemList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ChildItem {
+    border: 2px solid #d8d8d8;
+    border-radius: 7px;
+    margin: 5px 0;
+    width: 300px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .ChildItem--on {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+  }
+  .ChildItem--off {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  .ChildItem--THREAD {
+    border: 2px solid blue;
+  }
+  .ChildItem--BEAD {
+    border: 2px solid orange;
+  }
+
+  .Controller {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Controller__arrowBtn {
+    width: 100px;
+    border: 1px solid #d8d8d8;
+    border-radius: 7px;
+    margin: 0 10px;
+    cursor: pointer;
+    outline: none;
+  }
+}

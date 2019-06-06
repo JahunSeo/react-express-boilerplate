@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  height: 100%;
+  border: 2px solid green;
+}
+
+.section {
+  padding: 40px 0 40px;
+}
+.section--top {
+  border: 1px dotted blue;
+}
+
+.ChildItemList {
+  width: 100%;
+  height: 180px;
+  overflow-y: scroll;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ChildItem {
+  width: 300px;
+  border: 1px solid gray;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  margin: 5px 0;
+}
+
+.ChildItem--on {
+  background-color: orange;
+}
+
+.ChildItem__type {
+  font-size: 14px;
+  margin-right: 10px;
+}
+.ChildItem__title {
+  font-size: 16px;
+  font-weight: bold;
+}

@@ -109,4 +109,22 @@ router.get("/get/:vertexId", async function(req, res, next) {
   }
 });
 
+router.post("/add", async function(req, res, next) {
+  try {
+    let { fromId, order, vertex } = req.body;
+    // console.log("/vertices/add", fromId, order, vertex);
+    vertex = await models.Vertex.create(vertex);
+
+    let edge = {
+      from: fromId,
+      to: vertex.id,
+      order: order
+    };
+    edge = await models.Edge.create(edge);
+    res.json({ vertex, edge });
+  } catch (err) {
+    next(err);
+  }
+});
+
 module.exports = router;
